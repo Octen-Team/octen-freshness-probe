@@ -6,7 +6,7 @@ With `--watch`, it polls on an interval and reports each new URL the moment it b
 
 ## Setup
 
-Node 18.17 or later. Get an API key at https://octen.ai/platform/api-keys (new accounts get $5 of free balance).
+Node 18.17 or later (tested on Node 22). Get an API key at https://octen.ai/platform/api-keys (new accounts get $5 of free balance).
 
 ```bash
 git clone https://github.com/Octen-Team/octen-freshness-probe
