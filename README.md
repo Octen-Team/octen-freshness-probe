@@ -2,7 +2,7 @@
 
 A small CLI that measures how fresh [Octen](https://octen.ai)'s search index is on queries you choose. It asks Octen's Web Search API for pages captured in the last N minutes, then prints, for each result, when the page was published, when Octen last crawled it, and the gap between the two.
 
-With `--watch`, it polls on an interval and reports each new URL the moment it becomes searchable, along with how long after publication that happened. That number is an upper bound on the crawl-to-searchable window for that page (the true window is shorter by up to one polling interval).
+With `--watch`, it polls on an interval and reports each new URL the moment it becomes searchable, with the time the probe first saw it and Octen's `time_last_crawled`. The cleanest measurement uses a page you control. Note when you changed it, and the gap between that time and the first poll that returns the page is the crawl-to-searchable window on your content, bounded by the polling interval.
 
 ## Setup
 

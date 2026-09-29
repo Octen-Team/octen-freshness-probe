@@ -145,7 +145,9 @@ async function watch(opts: Options): Promise<void> {
       const sincePublished = minutesBetween(r.time_published, now);
       console.log(`[${now.toISOString()}] new: ${r.title}`);
       console.log(`  ${r.url}`);
-      console.log(`  published ${r.time_published ?? "n/a"}, searchable by ${fmt(sincePublished)} after publication`);
+      console.log(`  first seen by probe  ${now.toISOString()}`);
+      console.log(`  last crawled         ${r.time_last_crawled ?? "n/a"}`);
+      console.log(`  published            ${r.time_published ?? "n/a"} (searchable by ${fmt(sincePublished)} after publication)`);
       console.log("");
     }
     if (first) console.log(`Baseline: ${seen.size} URL(s) already in the window. Reporting new ones as they appear.\n`);
