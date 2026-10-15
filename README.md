@@ -9,7 +9,7 @@ With `--watch`, it polls on an interval and reports each new URL the moment it b
 Node 18.17 or later (tested on Node 22). Get an API key at https://octen.ai/platform/api-keys (new accounts get $5 of free balance).
 
 ```bash
-git clone https://github.com/Octen-Team/octen-freshness-probe
+git clone https://github.com/folucode/octen-freshness-probe
 cd octen-freshness-probe
 npm install
 export OCTEN_API_KEY=your-key-here
